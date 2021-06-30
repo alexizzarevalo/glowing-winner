@@ -1,0 +1,104 @@
+public class Practica {
+    Scanner entrada = new Scanner(System.in);
+    public void ejercicio1(int numero){
+        int imp=0;
+        int par=0;
+        int prom=0;
+
+        //ciclo que recorre todos los numeros
+        for (int i = 1; i <=numero ; i++) {
+            //si el numero es par
+            if (i%2==0){
+
+                par=i+par;
+                prom++;
+
+            }
+            //si el numero es impar
+            if (i%2!=0){
+
+                imp = i+imp;
+
+            }
+            }
+    //impresion de resultados
+        System.out.println("Suma Impares: "+imp);
+        System.out.println("Promedio pares: "+par/prom);
+
+        }
+
+
+    public boolean ejercicio2(int tamaño1, int tamaño2, int N){
+
+        int [] A;
+        int [] B;
+        int aux;
+        A = new int[tamaño1];
+        for (int i = 0; i <tamaño1 ; i++) {
+            System.out.println("Ingrese el Valor en la posicion "+(i+1)+" del arreglo: ");
+            aux=entrada.nextInt();
+            A[i]=aux;
+        }
+
+        B=new int[tamaño2];
+        for (int i = 0; i <tamaño2 ; i++) {
+
+            System.out.println("Ingrese el Valor en la posicion "+(i+1)+" del arreglo: ");
+            aux=entrada.nextInt();
+            B[i]=aux;
+
+        }
+
+        //comprobacion de valor en el segundo arreglo con respecto del primero
+
+        for (int i = 0; i <A.length ; i++) {
+            for (int j = 0; j <B.length ; j++) {
+
+                if (A[i]/N==B[j]){
+
+                    return true;
+
+                }
+
+            }
+
+        }
+
+
+        return false;
+    }
+    public void ejercicio3(int N){
+
+        int n=2;
+        System.out.print(n+" ");
+    //ciclo para crear la serie numerica
+        while (n<N){
+
+            n=n+3;
+            System.out.print(n+" ");
+
+            n=n+2;
+            System.out.print(n+" ");
+
+
+        }
+
+
+    }
+    public void ejercicio4(String palabrita){
+
+        String uwu=" ";
+
+
+        for (int i = palabrita.length()-1; i >=palabrita.length() ; i--) {
+
+            uwu = uwu+palabrita.charAt(i);
+
+        }
+
+        System.out.println(uwu);
+
+    }
+
+
+}
