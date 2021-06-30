@@ -1,0 +1,54 @@
+package practica;
+
+import java.util.Scanner;
+
+/**
+    @author CRISTOPHER
+ */
+
+public class Practica{
+
+    public static void main(String[] args) {
+        
+        /**Practica practica = new Practica();
+         */
+        boolean salir = false;
+        int opcion;
+        String cadena = new String();
+        
+        Scanner sc = new Scanner(System.in);
+        
+            while (!salir) {
+                System.out.print("Menú de Ejercicios \n 1. Ejercicio 1 \n 2. Ejercicio 2 \n 3. Ejercicio 3 \n 4. Ejercicio 4 \n 5. Salir \n");
+                System.out.print("Ingrese una opcion: ");
+                opcion = sc.nextInt();
+                    switch (opcion) {
+                        case 1:
+                            System.out.print("Bienvenido estas al Ejericio 1 \n En esta opcion. \n");
+                            break; 
+                        case 2:
+                            System.out.print("Bienvenido estas al Ejericio 2 \n En esta opcion. \n");
+                            break;
+                        case 3:
+                            System.out.print("Bienvenido estas al Ejericio 3 \n En esta opcion. \n");
+                            break;
+                        case 4:
+                            System.out.print("Bienvenido estas al Ejericio 4 \n En esta opcion lo que ingreses lo imprimira al revés. \n");
+                            System.out.print("Ingrese una palabra o un texto: ");
+                            cadena = sc.next();
+                               String invertida = "";
+                               for (int indice = cadena.length() - 1; indice >= 0; indice--) {
+                               invertida += cadena.charAt(indice);
+                               }
+                            System.out.print("La cadena al revés es: " + (invertida) + "\n");
+                            break;
+                        case 5:
+                            System.out.print("¡Hasta luego!");
+                            salir = true;
+                            break;
+                        default:
+                            System.out.print("Opcion no valida!");
+            }
+        }
+    }
+}
