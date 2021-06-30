@@ -46,7 +46,7 @@ public class Practica {
             while (numero != 0) {
 
                 if (numero % 2 == 0) {
-                    numpar = numpar + 2;
+                    numpar = numpar + 1;
                     prom = numpar;
                     System.out.println("El promedio es: " + prom);
 
