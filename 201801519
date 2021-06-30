@@ -1,0 +1,58 @@
+public class Practica {
+    
+   
+
+   
+    public static void main(String[] args) {
+        Practica control =new  Practica();
+        
+       int arreglo1[]=new int[]{1,2,3,4,5,6,7,8,9,10};
+       
+       String frase="amigos";
+       
+       control.ejercicio1(arreglo1);
+       control.ejercicio4(frase);
+    }
+    public void ejercicio1(int vector1[]){
+        int contador=0;
+        int contador1=0;
+        double promedio=0;
+        int arreglo1[]=vector1;
+         
+        for (int i=0;i<arreglo1.length;i++){
+            
+         if (arreglo1[i]  % 2 == 0 )
+        {
+            System.out.println( "ES PAR" );
+            contador=contador+arreglo1[i];
+            
+        }
+        else
+        {
+            System.out.println( "ES IMPAR" );
+             contador1=contador1+arreglo1[i];
+             
+             
+        }
+        }
+        promedio=contador1/arreglo1.length;
+        System.out.println("la sumatira es "+ contador);
+        System.out.println("la el promedio es es "+ promedio);
+        
+    }
+    
+    public void ejercicio4(String palabra){
+        String  frase=palabra;
+        
+        String invertir="";
+       
+
+        for (int i = frase.length()-1; i>=0; i--){
+            invertir += frase.charAt(i);
+        }
+
+        System.out.println("La palabra invertida es:\n"+ invertir);
+    }
+
+        
+    }
